@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+* Main body styles
+*/
+@layer base {
+    body {
+        overflow-x: hidden;
+    }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+    
+        ::-webkit-scrollbar-thumb {
+            background-color: #9F9F9F;
+            border-radius: 10px;
+        }
+    
+        ::-webkit-scrollbar-track {
+            background-color: #2C2C2C;
+        }
+    
+        ::-webkit-scrollbar-button {
+            background-color: #000000;
+        }
+
+        ::selection {
+            background-color: #f0f0f0;
+            color: #2C2C2C;
+        }
+        
+    
+}
+
+/* 
+* Font styles
+ */
 @font-face{
     font-family: "circular-web";
     src: url('./fonts/circularweb-book.woff2') format('woff2');
@@ -21,4 +58,22 @@
 @font-face{
     font-family: "zentry-regular";
     src: url('./fonts/zentry-regular.woff2') format('woff2');
+}
+
+/* 
+* Utility classes
+*/
+@layer utilities {
+    .align-center {
+        @apply justify-center items-center;
+    };
+    .flex-align-center {
+        @apply flex justify-center items-center
+    };
+    .clip-hex {
+        clip-path: polygon(31.25% 31.5%, 68.5% 31.5%, 90% 90%, 10% 90%);
+    };
+    .text-highlight-black {
+        
+    };
 }

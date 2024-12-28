@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+* Main body styles
+*/
+@layer base {
+    body {
+        padding: 1rem;
+        overflow-x: hidden;
+    }
+}
+
+/* 
+* Font styles
+ */
 @font-face{
     font-family: "circular-web";
     src: url('./fonts/circularweb-book.woff2') format('woff2');
@@ -21,4 +34,13 @@
 @font-face{
     font-family: "zentry-regular";
     src: url('./fonts/zentry-regular.woff2') format('woff2');
+}
+
+/* 
+* Utility classes
+*/
+@layer utilities {
+    .align-center {
+        @apply justify-center items-center;
+    }
 }

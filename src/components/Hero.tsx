@@ -21,26 +21,26 @@ const Hero = () => {
     } */
 
 
-    const currentVideo = `/videos/hero-${currentIndex}.mp4`;
+    const currentVideo = `/videos/hero-${currentIndex}.webm`;
     const changeMiniVideo = () => {
         setCurrentIndex((currentIndex % 3) + 1);
     }
 
   return (
-    <div className="relative w-screen min-h-screen overflow-x-hidden ">
+    <div className="relative w-screen min-h-screen overflow-hidden">
       <div className="z-10 relative">
         <video
           src={currentVideo}
           autoPlay
           loop
           muted
-          className="object-contain"
+          className="object-cover w-ful h-full"
         />
 
-        <div className="flex flex-col z-40 absolute top-0 left-0 w-full h-screen text-white p-5">
+        <div className="flex flex-col absolute top-0 left-0 w-full h-screen text-white p-5">
           {/* top header */}
-          <div className="text-left mt-5 pl-2">
-            <h1 className="text-9xl uppercase mb-2 font-zentry_regular bold tracking-wide">
+          <div className="text-left mt-8 pl-2">
+            <h1 className="text-9xl uppercase mb-2 font-zentry_regular font-bold tracking-wide">
               Prodigy
             </h1>
             <p className="mb-2 text-2xl font-semibold font-robert_regular">
@@ -57,21 +57,20 @@ const Hero = () => {
           </div>
 
           {/* Minivideo player */}
-          <div className="flex justify-center h-1/2 relative">
-            <div className="h-1/2 w-1/5 flex absolute top-[50%] transform translate-y-[-50%] cursor-pointer">
+          <div className="flex justify-center items-center h-1/2 relative">
+            <div className="h-full w-1/5 cursor-pointer" onClick={changeMiniVideo}>
               <video
                 src={currentVideo}
-                className="top-0 w-full object-cover scale-150 clip-hex"
+                className="w-full object-cover scale-150 clip-hex"
                 autoPlay
                 loop
-                onClick={changeMiniVideo}
               />
             </div>
           </div>
 
           {/* header's footer part */}
           <div>
-            <h1 className="text-right text-9xl uppercase font-zentry_regular bold tracking-wide">
+            <h1 className="text-right text-9xl uppercase font-zentry_regular font-bold tracking-wide">
               gaming
             </h1>
           </div>

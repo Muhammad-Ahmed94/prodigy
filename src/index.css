@@ -79,7 +79,11 @@
     .text-highlight-black {
         
     };
-    .border-test {
+    .borderRed {
         @apply border border-red-500;
+    };
+
+    .transform-center {
+        @apply transform translate-x-[-50%] translate-y-[-50%]
     };
 }

@@ -21,13 +21,13 @@ const Hero = () => {
     } */
 
 
-    const currentVideo = `/videos/hero-${currentIndex}.mp4`;
+    const currentVideo = `/videos/hero-${currentIndex}.webm`;
     const changeMiniVideo = () => {
         setCurrentIndex((currentIndex % 3) + 1);
     }
 
   return (
-    <div className="relative w-screen min-h-screen overflow-hidden ">
+    <div className="relative w-screen min-h-screen overflow-hidden">
       <div className="z-10 relative">
         <video
           src={currentVideo}
@@ -39,7 +39,7 @@ const Hero = () => {
 
         <div className="flex flex-col absolute top-0 left-0 w-full h-screen text-white p-5">
           {/* top header */}
-          <div className="text-left mt-5 pl-2">
+          <div className="text-left mt-8 pl-2">
             <h1 className="text-9xl uppercase mb-2 font-zentry_regular font-bold tracking-wide">
               Prodigy
             </h1>

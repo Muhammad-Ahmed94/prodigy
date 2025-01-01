@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { /* useEffect, useRef, */ useState } from "react";
 import { BiPlay } from "react-icons/bi";
 import Button from "./Button";
 

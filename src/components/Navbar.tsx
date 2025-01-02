@@ -7,7 +7,6 @@ import Button from './Button';
 const Navbar = () => {
   const [playAudio, setPlayAudio] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
   const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
 
   const toggleAudio = () => {

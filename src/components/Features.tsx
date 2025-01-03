@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 interface BentoCardProps {
   source: string;
@@ -7,27 +7,74 @@ interface BentoCardProps {
   isComingSoon?: boolean;
 }
 
-const BentoCard: React.FC<BentoCardProps> = ({ source, title, details, isComingSoon}) => {
+const BentoCard: React.FC<BentoCardProps> = ({
+  source,
+  title,
+  details,
+  isComingSoon,
+}) => {
+  const [play, setPlay] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const playVideo = () => {
+    if (videoRef) {
+      if (!play) {
+        videoRef.current?.play();
+        setPlay(true);
+      }
+    }
+  };
+  const stopVideo = () => {
+    if (play) {
+      videoRef.current?.pause();
+      setPlay(false);
+    }
+  };
+
   return (
-    <div className="relative size-full text-feature-primary">
+    <div
+      className="relative size-full text-feature-primary"
+      onMouseEnter={playVideo}
+      onMouseLeave={stopVideo}
+    >
       <video
+        ref={videoRef}
         src={source}
+        autoPlay={play}
+        loop
         muted
-        loop={false}
-        autoPlay
         className="absolute top-0 left-0 size-full object-center object-cover"
       />
       <div className="p-5 relative z-10 flex flex-col size-full">
         <div>
-          <h2 className="font-bold text-3xl uppercase">{title}</h2> {/* give font style */}
-          <p className="mt-3 max-w-96 text-sm md:text-base">{details}</p>
+          <h2 className="font-bold text-3xl uppercase">{title}</h2>{" "}
+          {/* give font style */}
+          <p className="mt-3 max-w-80 text-sm md:text-base">{details}</p>
         </div>
       </div>
     </div>
   );
-}
+};
 
 const Features = () => {
+  const [play, setPlay] = useState(false)
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  const playVideo = () => {
+    if (videoRef) {
+      if (!play) {
+        videoRef.current?.play();
+        setPlay(true);
+      }
+    }
+  };
+  const stopVideo = () => {
+    if (play) {
+      videoRef.current?.pause();
+      setPlay(false);
+    }
+  };
+
   return (
     <section className="min-h-screen w-screen bg-black py-8">
       <div className="pl-16 mt-2 pb-20 text-left font-robert_regular">
@@ -77,15 +124,18 @@ const Features = () => {
           </div>
 
           <div className="relative col-span-2 flex justify-center items-center gap-6 row-span-1 overflow-hidden rounded-d transition-transform duration-300 ">
-            <div className="h-64 w-64 bg-voilet-300 uppercase text-white text-4xl font-bold font-robert_regular rounded-md flex justify-center items-center text-center">
+            <div className="h-64 w-64 bg-voilet-300 uppercase text-black text-5xl font-extrabold font-zentry rounded-md flex justify-center items-center text-center">
               {" "}
               <h2>more coming soon</h2>
             </div>
 
-            <div className="h-64 w-64 flex justify-center">
+            <div className="h-64 w-64 flex justify-center" onMouseEnter={playVideo} onMouseLeave={stopVideo}>
               <video
+                ref={videoRef}
                 src="/videos/feature-5.webm"
-                className="object-contain object-center origin-center"
+                className="object-contain object-center origin-center rounded-md"
+                autoPlay={play}
+                loop
               />
             </div>
           </div>
@@ -93,6 +143,6 @@ const Features = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Features
+export default Features;

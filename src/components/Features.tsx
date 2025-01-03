@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState } from 'react';
 
 interface BentoCardProps {
   source: string;
@@ -57,7 +57,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
 };
 
 const Features = () => {
-  const [play, setPlay] = useState(false)
+  const [play, setPlay] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const playVideo = () => {
@@ -129,11 +129,15 @@ const Features = () => {
               <h2>more coming soon</h2>
             </div>
 
-            <div className="h-64 w-64 flex justify-center" onMouseEnter={playVideo} onMouseLeave={stopVideo}>
+            <div
+              className="h-64 w-64 flex justify-center overflow-hidden rounded-md"
+              onMouseEnter={playVideo}
+              onMouseLeave={stopVideo}
+            >
               <video
                 ref={videoRef}
                 src="/videos/feature-5.webm"
-                className="object-contain object-center origin-center rounded-md"
+                className="object-contain object-center origin-center scale-150"
                 autoPlay={play}
                 loop
               />

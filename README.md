@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+# Prodigy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Prodigy-readme-image](https://github.com/user-attachments/assets/a0c3c1ab-6fa4-4b54-bcfc-644f59288596)
 
-Currently, two official plugins are available:
+## Table of contents
+- ### Installation
+- ### Introduction
+- ### Project structure
+- ### Techs used in project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Installation
+Follow the **Steps** to setup the project locally.
+1. #### Clone the repo
+```
+git clone https://github.com/Muhammad-Ahmed94/prodigy
+```
+2. #### Install dependencies
+```
+npm install
+```
+3. #### Start
+```
+npm start
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Introduction
+The **Prodigy** Project is an immersive web application that introduces users to an *interconnected gaming universe*. With captivating animations, engaging audio, and seamless navigation, Prodigy offers a unique blend of user experience and cutting-edge technologies.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Porject Structure
 ```
+prodigy-master/
+├── public/                 # Assets (audio, videos, fonts, images)
+├── src/                    # Source code
+│   ├── components/         # Contains project components
+│   ├── App.tsx            # Root App
+│   ├── main.tsx           # Root Main
+├── package.json            # Dependencies and scripts
+├── vite.config.ts          # Vite configuration
+└── README.md               # Documentation
+```
+
+## Techs Used
+- **ReactJs**: User Interface.
+- **Typescript**: Type safety ensurance.
+- **Tailwindcss**: Styling the components.
+- **gsap**: For advance and smooth animations and transitions.
+- **VIte**: Development and build tool
+-  **Netlify**: For project deployment.
+
+### Contributions
+**Feel free to contribute to my project. let's connect and work together. Also give a star**

@@ -88,6 +88,15 @@
     }
 
     .transform-center {
-        @apply transform translate-x-[-50%] translate-y-[-50%]
+        @apply transform translate-x-[-50%] translate-y-[-50%];
     }
+
+    .clip-contact-1 {
+        clip-path: polygon(0 0, 85% 26%, 85% 75%, 0 100%);
+    }
+    .clip-contact-2 {
+        clip-path: polygon(15% 20%, 100% 0, 100% 100%, 15% 80%);
+    }
+
+
 }

@@ -23,6 +23,10 @@ export default {
         },
         yellow: {
           100: '#8e983f'
+        },
+        feature: {
+          primary: '#DFDFF2',
+          secondary: '#595961',
         }
       }
     }

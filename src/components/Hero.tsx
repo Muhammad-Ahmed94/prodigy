@@ -5,23 +5,7 @@ import Button from "./Button";
 const Hero = () => {
     const [ currentIndex, setCurrentIndex ] = useState(1);
 
-
-    /* const [ playAudio, setPlayAudio ] = useState(false);
-    const audioRef = useRef<HTMLAudioElement | null> (null);
-    const handleAudioPlay = () => {
-        if(audioRef.current) {
-            if (!playAudio) {
-                audioRef.current.play()
-                setPlayAudio(true)
-            } else {
-                audioRef.current.pause()
-                setPlayAudio(false)
-            }
-        }
-    } */
-
-
-    const currentVideo = `/videos/hero-${currentIndex}.webm`;
+    const currentVideo = `/videos/hero-${currentIndex}.mp4`;
     const changeMiniVideo = () => {
         setCurrentIndex((currentIndex % 3) + 1);
     }
@@ -34,7 +18,7 @@ const Hero = () => {
           autoPlay
           loop
           muted
-          className="object-cover w-ful h-full"
+          className="object-cover w-full h-full"
         />
 
         <div className="flex flex-col absolute top-0 left-0 w-full h-screen text-white p-5">
@@ -74,7 +58,6 @@ const Hero = () => {
               gaming
             </h1>
           </div>
-          {/* <audio ref={audioRef} src="/auido/loop.mp3" loop /> */}
         </div>
       </div>
     </div>

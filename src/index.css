@@ -66,24 +66,37 @@
 @layer utilities {
     .align-center {
         @apply justify-center items-center;
-    };
+    }
     .flex-align-center {
         @apply flex justify-center items-center;
-    };
+    }
     .flex-col-align-center {
         @apply flex flex-col justify-center items-center;
-    };
+    }
     .clip-hex {
         clip-path: polygon(31.25% 31.5%, 68.5% 31.5%, 90% 90%, 10% 90%);
-    };
-    .text-highlight-black {
-        
-    };
+    }
+    .border-red{
+        @apply border border-red-500;
+    }
+
+    .border-light {
+        @apply border border-slate-300;
+    }
     .borderRed {
         @apply border border-red-500;
-    };
+    }
 
     .transform-center {
-        @apply transform translate-x-[-50%] translate-y-[-50%]
-    };
+        @apply transform translate-x-[-50%] translate-y-[-50%];
+    }
+
+    .clip-contact-1 {
+        clip-path: polygon(0 0, 85% 26%, 85% 75%, 0 100%);
+    }
+    .clip-contact-2 {
+        clip-path: polygon(15% 20%, 100% 0, 100% 100%, 15% 80%);
+    }
+
+
 }

@@ -91,7 +91,7 @@ const Features = () => {
       <div className="container mx-auto border-light relative w-full overflow-hidden rounded-md flex flex-col gap-4">
         <div className="h-96 md:h-[55vh]">
           <BentoCard
-            source="/videos/feature-1.webm"
+            source="/videos/feature-1.mp4"
             title="Radiant"
             details="Immerse yourself in a dynamic and ever-evolving ecosystem where a diverse range of products seamlessly unite within an interconnected world."
             isComingSoon
@@ -101,7 +101,7 @@ const Features = () => {
         <div className="grid h-[125vh] grid-cols-2 grid-rows-3 gap-7">
           <div className="relative h-[70vh] border-light overflow-hidden transition-transform duration-300 row-span-1 col-span-1 md:row-span-2 rounded-md">
             <BentoCard
-              source="/videos/feature-2.webm"
+              source="/videos/feature-2.mp4"
               title="Zigma"
               details="an anime and gaming inspired nft collection __ prime D valorant"
             />
@@ -109,7 +109,7 @@ const Features = () => {
 
           <div className="relative border-light col-span-1 row-span-1 overflow-hidden rounded-md transition-transform duration-300 ms-8 md:col-span-1">
             <BentoCard
-              source="/videos/feature-3.webm"
+              source="/videos/feature-3.mp4"
               title="Nexus"
               details="A gamified social hub, adding a new dimension of play to your identity. Web-3 engagement "
             />
@@ -117,7 +117,7 @@ const Features = () => {
 
           <div className="relative border-light col-span-1 row-span-1 overflow-hidden rounded-md transition-transform duration-300 me-10 md:col-span-1">
             <BentoCard
-              source="/videos/feature-4.webm"
+              source="/videos/feature-4.mp4"
               title="azule"
               details="A cross-world AI agent elevating your gameplay to be more fun and interactive"
             />
@@ -136,7 +136,7 @@ const Features = () => {
             >
               <video
                 ref={videoRef}
-                src="/videos/feature-5.webm"
+                src="/videos/feature-5.mp4"
                 className="object-contain object-center origin-center scale-150"
                 autoPlay={play}
                 loop

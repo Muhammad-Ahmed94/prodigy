@@ -57,7 +57,7 @@ const Navbar = () => {
             width={40}
             className="rounded-full object-contain"
           />
-          <Button title="Click me" styles="bg-slate-500" icon={GiClick} />
+          <Button title="Products" styles="bg-slate-500" icon={GiClick} />
         </div>
         <div className="flex justify-between items-center gap-4">
           {navItems.map((item) => (

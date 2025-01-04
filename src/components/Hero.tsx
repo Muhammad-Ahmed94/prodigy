@@ -5,7 +5,7 @@ import Button from "./Button";
 const Hero = () => {
     const [ currentIndex, setCurrentIndex ] = useState(1);
 
-    const currentVideo = `/videos/hero-${currentIndex}.webm`;
+    const currentVideo = `/videos/hero-${currentIndex}.mp4`;
     const changeMiniVideo = () => {
         setCurrentIndex((currentIndex % 3) + 1);
     }

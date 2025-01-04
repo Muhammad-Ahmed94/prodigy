@@ -12,7 +12,7 @@
 Follow the **Steps** to setup the project locally.
 1. #### Clone the repo
 ```
-git clone https://github.com/Muhammad-Ahmed94/prodigy
+git clone https://github.com/Muhammad-Ahmed94/prodigy.git
 ```
 2. #### Install dependencies
 ```

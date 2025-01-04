@@ -4,14 +4,12 @@ interface BentoCardProps {
   source: string;
   title: string;
   details: string;
-  isComingSoon?: boolean;
 }
 
 const BentoCard: React.FC<BentoCardProps> = ({
   source,
   title,
   details,
-  isComingSoon,
 }) => {
   const [play, setPlay] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -94,7 +92,6 @@ const Features = () => {
             source="/videos/feature-1.mp4"
             title="Radiant"
             details="Immerse yourself in a dynamic and ever-evolving ecosystem where a diverse range of products seamlessly unite within an interconnected world."
-            isComingSoon
           />
         </div>
 

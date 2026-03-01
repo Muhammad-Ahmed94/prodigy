@@ -57,7 +57,7 @@ const Hero = () => {
   const changeMiniVideo = () => {
     if (isTransitioning) return;
 
-    const nextIndex = (currentIndex % 3) + 1;
+    const nextIndex = (currentIndex % 2) + 1;
 
     // Check next video is loaded
     if (!videosLoaded[nextIndex]?.loaded) {

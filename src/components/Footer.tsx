@@ -23,7 +23,6 @@ const Footer = () => {
             href={links.href}
             target="_blank"
           >
-            {/* hey there what is goign on here bai */}
             {links.icon}
           </a>
         </div>

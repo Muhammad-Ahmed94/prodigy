@@ -14,13 +14,12 @@ const About = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
 
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   useEffect(() => {
     if (!imageLoaded) return;
 
@@ -40,7 +39,7 @@ const About = () => {
               end: "center 60%",
               scrub: 1,
             },
-          }
+          },
         );
       } else {
         // Image sliding from left
@@ -58,7 +57,7 @@ const About = () => {
               end: "center center",
               scrub: 1,
             },
-          }
+          },
         );
 
         // Image expanding animation
@@ -93,7 +92,7 @@ const About = () => {
           <h2 className="text-sm sm:text-base lg:text-lg uppercase font-general tracking-wide">
             welcome to prodigy
           </h2>
-          
+
           {/* Main title */}
           <div className="uppercase mt-4 sm:mt-6 lg:mt-8 mb-8 sm:mb-12 lg:mb-20 font-general font-bold text-center tracking-tight">
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
@@ -115,18 +114,18 @@ const About = () => {
                   </div>
                 </div>
               )}
-              
+
               {/* main images*/}
               <img
                 ref={imgRef}
                 src="/img/about.webp"
                 alt="about-image"
                 className={`w-full h-auto object-contain rounded-2xl transition-opacity duration-300 ${
-                  imageLoaded ? 'opacity-100' : 'opacity-0 absolute inset-0'
+                  imageLoaded ? "opacity-100" : "opacity-0 absolute inset-0"
                 }`}
                 onLoad={() => setImageLoaded(true)}
                 onError={() => {
-                  console.error('Failed to load about image');
+                  console.error("Failed to load about image");
                   setImageLoaded(true);
                 }}
                 loading="lazy"

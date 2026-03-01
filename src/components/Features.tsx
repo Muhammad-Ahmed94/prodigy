@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from "react";
 
 interface BentoCardProps {
   source: string;
@@ -11,7 +11,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
   source,
   title,
   details,
-  className = ""
+  className = "",
 }) => {
   const [play, setPlay] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -27,7 +27,7 @@ const BentoCard: React.FC<BentoCardProps> = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: '50px' }
+      { threshold: 0.1, rootMargin: "50px" },
     );
 
     if (containerRef.current) {
@@ -41,16 +41,16 @@ const BentoCard: React.FC<BentoCardProps> = ({
   useEffect(() => {
     if (isInView && videoRef.current && !isLoaded) {
       const video = videoRef.current;
-      
+
       const handleLoadedData = () => {
         setIsLoaded(true);
       };
 
-      video.addEventListener('loadeddata', handleLoadedData);
+      video.addEventListener("loadeddata", handleLoadedData);
       video.load();
 
       return () => {
-        video.removeEventListener('loadeddata', handleLoadedData);
+        video.removeEventListener("loadeddata", handleLoadedData);
       };
     }
   }, [isInView, isLoaded]);
@@ -98,9 +98,9 @@ const BentoCard: React.FC<BentoCardProps> = ({
         muted
         playsInline
         className="absolute top-0 left-0 size-full object-center object-cover"
-        style={{ display: isLoaded ? 'block' : 'none' }}
+        style={{ display: isLoaded ? "block" : "none" }}
       />
-      
+
       <div className="p-3 sm:p-5 relative z-10 flex flex-col size-full">
         <div>
           <h2 className="font-bold text-xl sm:text-2xl lg:text-3xl uppercase leading-tight">
@@ -142,8 +142,10 @@ const Features = () => {
           Step into the Prodigy Gaming Universe
         </h3>
         <p className="font-semibold text-feature-secondary text-sm sm:text-base mt-2">
-          Immerse yourself in a dynamic and ever-evolving <br className="hidden sm:block" /> 
-          ecosystem where a diverse range of products <br className="hidden sm:block" /> 
+          Immerse yourself in a dynamic and ever-evolving{" "}
+          <br className="hidden sm:block" />
+          ecosystem where a diverse range of products{" "}
+          <br className="hidden sm:block" />
           seamlessly unite within an interconnected world.
         </p>
       </div>
@@ -178,7 +180,7 @@ const Features = () => {
                 details="A gamified social hub, adding a new dimension of play to your identity. Web-3 engagement"
               />
             </div>
-            
+
             <div className="h-32 sm:h-40 lg:h-[30vh]">
               <BentoCard
                 source="/videos/feature-4.mp4"
@@ -191,14 +193,14 @@ const Features = () => {
           {/* Bottom section */}
           <div className="col-span-1 sm:col-span-2 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 order-3 py-4">
             {/* Coming soon card */}
-            <div className="h-40 w-full sm:h-64 sm:w-64 bg-voilet-300 uppercase text-black text-2xl sm:text-3xl lg:text-5xl font-extrabold font-zentry_regular rounded-md flex justify-center items-center text-center p-4">
+            <div className="h-40 w-full sm:h-64 sm:w-1/2 sm:max-w-xs bg-voilet-300 uppercase text-black text-2xl sm:text-3xl lg:text-5xl font-extrabold font-zentry_regular rounded-md flex justify-center items-center text-center p-4">
               <h2 className="leading-tight">more coming soon</h2>
             </div>
 
             {/* Video card */}
             <div
               ref={containerRef}
-              className="h-40 w-full sm:h-64 sm:w-64 flex justify-center overflow-hidden rounded-md relative bg-gray-800"
+              className="h-40 w-full sm:h-64 sm:w-1/2 sm:max-w-xs flex justify-center overflow-hidden rounded-md relative bg-gray-800"
               onMouseEnter={playVideo}
               onMouseLeave={stopVideo}
             >
@@ -207,7 +209,7 @@ const Features = () => {
                   <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
                 </div>
               )}
-              
+
               <video
                 ref={videoRef}
                 src="/videos/feature-5.mp4"
@@ -217,7 +219,7 @@ const Features = () => {
                 muted
                 playsInline
                 onLoadedData={() => setIsLoaded(true)}
-                style={{ display: isLoaded ? 'block' : 'none' }}
+                style={{ display: isLoaded ? "block" : "none" }}
               />
             </div>
           </div>

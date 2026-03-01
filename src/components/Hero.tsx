@@ -101,7 +101,7 @@ const Hero = () => {
           style={{ display: isCurrentVideoLoaded ? "block" : "none" }}
         />
 
-        <div className="flex flex-col absolute top-0 left-0 w-full h-screen text-white p-3 sm:p-5">
+        <div className="flex flex-col justify-between absolute top-0 left-0 w-full h-screen text-white p-3 sm:p-5">
           {/* Top header */}
           <div className="text-left mt-4 sm:mt-8 pl-1 sm:pl-2">
             <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl uppercase mb-2 font-zentry_regular font-bold tracking-wide leading-none">
@@ -121,7 +121,7 @@ const Hero = () => {
           </div>
 
           {/* Mini video player */}
-          <div className="flex justify-center items-center mt-6 sm:mt-8 lg:mt-12 px-4">
+          <div className="flex-grow flex justify-center items-center px-4">
             <div
               className={`w-28 h-40 sm:w-36 sm:h-52 md:w-44 md:h-64 lg:w-1/5 lg:h-[350px] cursor-pointer relative overflow-hidden rounded-lg bg-black transition-transform duration-200 ${
                 isTransitioning ? "scale-95" : "scale-100 hover:scale-105"

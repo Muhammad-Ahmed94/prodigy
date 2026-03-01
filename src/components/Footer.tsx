@@ -18,14 +18,17 @@ const Footer = () => {
           <p className="text-xs sm:text-sm text-center">
             &copy; prodigy 2024. all rights reserved
           </p>
-          <a className="hover:text-white text-xl sm:text-2xl" href={links.href}>
+          <a
+            className="hover:text-white text-xl sm:text-2xl"
+            href={links.href}
+            target="_blank"
+          >
             {links.icon}
           </a>
         </div>
         <div>
           <a
             href="#"
-            target="_blank"
             rel="noopener noreferrer"
             className="hover:underline text-xs sm:text-sm"
           >

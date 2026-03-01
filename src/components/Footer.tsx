@@ -25,6 +25,7 @@ const Footer = () => {
         <div>
           <a
             href="#"
+            target="_blank"
             rel="noopener noreferrer"
             className="hover:underline text-xs sm:text-sm"
           >
